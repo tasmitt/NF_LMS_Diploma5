@@ -2,20 +2,12 @@ package com.tas.javaElementary.course.diploma;
 
 import java.time.LocalDate;
 
-public class User {
-    private String firstName;
-    private String lastName;
-    private LocalDate dateOfBirth;
+public abstract class User {
+    //I thought that it is more important to make fields private than to put them here, isnt it?
 
-    public String getFirstName() {
-        return firstName;
-    }
+    public abstract String getFirstName();
 
-    public String getLastName() {
-        return lastName;
-    }
+    public abstract String getLastName();
 
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
+    public abstract LocalDate getDateOfBirth();
 }
