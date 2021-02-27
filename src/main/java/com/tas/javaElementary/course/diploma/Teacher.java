@@ -52,4 +52,13 @@ public class Teacher extends User{
     public boolean hasGroup(Group group){
         return groups.contains(group);
     }
+
+    public Group getGroup(Group group){
+        int index = groups.indexOf(group);
+        return groups.get(index);
+    }
+
+    public boolean hasGroup(){
+        return groups.size() != 0;
+    }
 }

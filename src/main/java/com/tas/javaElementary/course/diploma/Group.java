@@ -11,7 +11,9 @@ public class Group {
 
     private List<Student> students= new ArrayList<>();
     private List<Teacher> teachers = new ArrayList<>();
+    private List<Lesson> lessons = new ArrayList<>();
     private Feed feed = new Feed();
+
 
     public Group(String name, String direction, LocalDate startDate) {
         this.name = name;
@@ -66,5 +68,18 @@ public class Group {
 
     public List<Teacher> getTeachers() {
         return teachers;
+    }
+
+    public List<Lesson> getLessons() {
+        return lessons;
+    }
+
+    public boolean addLesson(Lesson lesson) {
+        return this.lessons.add(lesson);
+    }
+
+    public Lesson getLesson(Lesson lesson) {
+        int index = lessons.indexOf(lesson);
+        return this.lessons.get(index);
     }
 }
